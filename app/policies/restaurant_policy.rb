@@ -8,12 +8,11 @@ class RestaurantPolicy < ApplicationPolicy
   end
 
   def update?
-    binding.pry
     user == record.user
   end
 
   def destroy?
-    record.user == user
+    user == record.user
   end
 
   class Scope < Scope
